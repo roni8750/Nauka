@@ -21,5 +21,10 @@ const handleNavItemsAnimation = () => {
         delayTime++;
 	})
 }
+const deleteAnimation = () => {
+    allNavItems.forEach(item => {
+        item.classList.remove('nav-items-animation')
+    })
+}
 
 navBtn.addEventListener('click', handleNav)
