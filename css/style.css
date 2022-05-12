@@ -302,7 +302,7 @@ nav .burger-btn__bars::before {
   background-color: #eee;
 }
 
-.main .dreams__box {
+.dreams__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,21 +313,175 @@ nav .burger-btn__bars::before {
   margin: 2em 0;
 }
 
-.main .dreams__img {
+.dreams__img {
   width: 100%;
   margin-bottom: 1em;
 }
 
-.main .dreams__title {
+.dreams__title {
   margin-bottom: 0.5em;
 }
 
-.main .dreams__text {
+.dreams__text {
   font-size: 1.4rem;
 }
 
+.hero-img {
+  position: relative;
+  padding: 10em 2em;
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/polynesia-_640.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-img__title {
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 0.5em;
+  font-size: 4.8rem;
+}
+
+.hero-img__text {
+  padding: 1em 0;
+}
+
+.islands__card {
+  position: relative;
+  margin: 1em 0;
+  height: 450px;
+  color: #fff;
+  text-align: center;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.islands__card:hover .islands__card-img {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.islands__card:hover .islands__card-info {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  opacity: 1;
+}
+
+.islands__card-img {
+  padding: 2em;
+  height: 100%;
+  border-radius: 8px;
+  background-size: cover;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.islands__card-img--first {
+  background-image: linear-gradient(45deg, rgba(8, 206, 255, 0.75), rgba(8, 24, 255, 0.75)), url("../img/boat-_640.jpeg");
+}
+
+.islands__card-img--second {
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/hawaii-_640.jpeg");
+}
+
+.islands__card-img--third {
+  background-image: linear-gradient(45deg, rgba(190, 10, 214, 0.75), rgba(68, 0, 255, 0.75)), url("../img/water-_640.jpeg");
+}
+
+.islands__card-img-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+}
+
+.islands__card-img-info {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.8rem;
+}
+
+.islands__card-img-info i {
+  margin-right: 0.3em;
+}
+
+.islands__card-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: radial-gradient(circle at top right, #004eff 0%, #00d4ff 100%);
+  border-radius: 8px;
+  opacity: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, transform 1s;
+  transition: opacity 1s, transform 1s, -webkit-transform 1s;
+}
+
+.islands__card-info-title {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 1.2em;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+}
+
+.islands__card-info-list {
+  margin: 0 auto;
+  width: 70%;
+  list-style: none;
+}
+
+.islands__card-info-list-item {
+  padding: 1em;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eee;
+}
+
+.islands__card-info-list-item:last-child {
+  border-bottom: none;
+}
+
+.islands__card-info-btn {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 2em;
+  padding: 1em;
+  border-radius: 8px;
+  width: 80%;
+  border: none;
+  background-color: #00ffaa;
+  cursor: pointer;
+}
+
+.islands__card-info-btn::before {
+  background-color: #0fe29c;
+}
+
 @media (min-width: 576px) {
-  .main .dreams__box {
+  .dreams__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -336,21 +490,21 @@ nav .burger-btn__bars::before {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .main .dreams__box-text {
+  .dreams__box-text {
     width: 55%;
   }
-  .main .dreams__box-text--right {
+  .dreams__box-text--right {
     text-align: right;
   }
-  .main .dreams__box-img {
+  .dreams__box-img {
     width: 40%;
   }
-  .main .dreams__box-img--right {
+  .dreams__box-img--right {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  .main .dreams__img {
+  .dreams__img {
     margin-bottom: 0;
     max-height: 300px;
   }
@@ -370,8 +524,32 @@ nav .burger-btn__bars::before {
   .header__btn {
     font-size: 1.8rem;
   }
-  .main .dreams__text {
+  .dreams__text {
     font-size: 1.8rem;
+  }
+  .hero-img {
+    padding: 30rem 2em;
+  }
+  .hero-img hr {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .hero-img__text {
+    font-size: 2.2rem;
+  }
+  .islands__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .islands__card {
+    margin: 1em;
+    width: 45%;
   }
 }
 
@@ -389,10 +567,10 @@ nav .burger-btn__bars::before {
   .nav__items {
     font-size: 4.8rem;
   }
-  .main .dreams__box {
+  .dreams__box {
     margin: 5em 0;
   }
-  .main .dreams__box-text {
+  .dreams__box-text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -405,11 +583,28 @@ nav .burger-btn__bars::before {
             justify-content: flex-end;
     margin-bottom: 4em;
   }
-  .main .dreams__title {
+  .dreams__title {
     font-size: 3.6rem;
   }
-  .main .dreams__text {
+  .dreams__text {
     font-size: 2.2rem;
+  }
+  .hero-img {
+    padding: 40rem 2em;
+    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/polynesia-_1920.jpeg");
+  }
+  .hero-img__title {
+    font-size: 7.2rem;
+  }
+  .hero-img hr {
+    width: 60%;
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .islands__card {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */
