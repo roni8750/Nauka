@@ -223,6 +223,12 @@ nav .burger-btn__bars::before {
           transition-delay: 0.1s;
 }
 
+nav .burger-btn .black-bars-color,
+nav .burger-btn .black-bars-color::after,
+nav .burger-btn .black-bars-color::before {
+  background-color: #2e2e2e;
+}
+
 @-webkit-keyframes navItemsAnimation {
   from {
     -webkit-transform: translateX(200%);
@@ -346,12 +352,6 @@ nav .burger-btn__bars::before {
 
 .hero-img__text {
   padding: 1em 0;
-}
-
-.black-bars-color,
-.black-bars-color::after,
-.black-bars-color::before {
-  background-color: #2e2e2e;
 }
 
 .islands__card {

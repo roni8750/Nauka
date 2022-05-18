@@ -30,6 +30,7 @@ const handleNavItemsAnimation = () => {
     })
 }
 
+
 const handleObserver = () => {
     const currentSection = window.scrollY;
 

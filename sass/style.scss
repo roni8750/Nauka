@@ -17,6 +17,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
 }
+
 nav {
 	.nav {
 		position: fixed;
@@ -102,8 +103,14 @@ nav {
 				transition-delay: 0.1s;
 			}
 		}
+		.black-bars-color,
+		.black-bars-color::after,
+		.black-bars-color::before {
+			background-color: $dark;
+		}
 	}
 }
+
 @keyframes navItemsAnimation {
 	from {
 		transform: translateX(200%);
@@ -183,11 +190,6 @@ nav {
 	&__text {
 		padding: 1em 0;
 	}
-}
-.black-bars-color,
-.black-bars-color::after,
-.black-bars-color::before {
-	background-color: $dark;
 }
 .islands {
 	&__card {
