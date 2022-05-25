@@ -111,6 +111,10 @@ body {
   font-size: 1.6rem;
 }
 
+.sticky-body {
+  overflow: hidden;
+}
+
 nav .nav {
   position: fixed;
   top: 0;
